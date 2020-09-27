@@ -6,12 +6,12 @@
 * Market Quotes
 ** LTP Quotes
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC shell :results output
 curl "http://localhost:4000/quote/ltp?i=NSE:INFY" \
   -H "X-Kite-Version: 3" \
   -H "Authorization: token api_key:access_token"
 #+END_SRC
 
 #+RESULTS:
-| data":{"NSE:INFY":{"instrument_token | last_price:1234.15}} | success |
+: {"data":{"NSE:INFY":{"instrument_token":23533,"last_price":1234.15}},"status":"success"}
 
