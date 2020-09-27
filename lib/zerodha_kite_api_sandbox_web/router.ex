@@ -5,8 +5,10 @@ defmodule KiteSBWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", KiteSBWeb do
+  scope "/", KiteSBWeb do
     pipe_through :api
+
+    get "/quote/ltp", QuoteController, :quote_ltp
   end
 
   # Enables LiveDashboard only for development
